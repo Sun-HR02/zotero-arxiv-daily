@@ -133,13 +133,13 @@ if __name__ == '__main__':
         "--model_name",
         type=str,
         help="LLM Model Name",
-        default="gpt-4o",
+        default="deepseek-r1",
     )
     add_argument(
         "--language",
         type=str,
         help="Language of TLDR",
-        default="English",
+        default="Chinese",
     )
     parser.add_argument('--debug', action='store_true', help='Debug mode')
     args = parser.parse_args()
