@@ -155,8 +155,9 @@ class ArxivPaper:
             if match:
                 conclusion = match.group(0)
         llm = get_llm()
-        prompt = """Given the title, abstract, introduction and the conclusion (if any) of a paper in latex format, generate a one-sentence TLDR summary in __LANG__:
-        
+        # prompt = """Given the title, abstract, introduction and the conclusion (if any) of a paper in latex format, generate a one-sentence TLDR summary in __LANG__:
+        prompt = """针对计算机科学系的研究生，基于the title, abstract, introduction and the conclusion (if any) of a paper in latex format, 用通俗易懂的语言生成 TLDR summary in __LANG__:
+
         \\title{__TITLE__}
         \\begin{abstract}__ABSTRACT__\\end{abstract}
         __INTRODUCTION__
